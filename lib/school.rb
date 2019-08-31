@@ -1,6 +1,6 @@
 class School
 
-  attr_accessor :name, 
+  attr_accessor :name, :roster
 
   def initialize(name)
       @name = name
@@ -16,9 +16,9 @@ class School
   end
 
   def sort
-    sorted _roster ={}
+    sorted_roster ={}
     roster.each do |grade, students|
-      sorted_roster[grade] = students.sorted
+      sorted_roster[grade] = students.sort
     end
     sorted_roster
   end
